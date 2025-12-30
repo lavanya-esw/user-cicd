@@ -6,6 +6,8 @@ RUN npm install
 
 FROM node:20.19.5-alpine3.21
 WORKDIR /opt/server
+RUN apk update && \
+    apk upgrade --no-cache
 EXPOSE 8080
 LABEL com.project="roboshop" \
       component="user"
